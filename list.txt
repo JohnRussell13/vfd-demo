@@ -1,0 +1,58 @@
+---- 4 x IGBT ----
+** Potrebno da moze 0.4A struje i 330V maksimalno, sa sto manjim padom napona u zasicenju **
+
+Slab, ali 95% sam siguran da je dovoljno jak:
+
+LINK: https://electronic.ba/proizvod/60104/tranzistor-toshiba-igbt-125-c-gt45g128
+
+---- 2 x DRAJVER ----
+Od firme ST chip oznake L638x, npr:
+L6384, L6386 ...
+
+Ja nisam nasao na sajtovima, postoji i alternativa za njega, ali je on najbolja opcija (ostalo komplikuje semu znacajno)
+Ovde ima spisak gde se moze naci:
+https://www.digipart.com/part/L6384
+
+Ako bas nikako ne dodjes do njih, bice ok i ovaj:
+https://electronic.ba/proizvod/56392/driver-infineon-technologies-ir21531dpbf
+ali posto je komplikovanija sema sa njim, rizikuje se veci broj kvarova.
+
+---- 3 x GREC ----
+** Potrebno da moze 0.4A struje **
+
+Ovaj ce biti dovoljan:
+
+LINK: https://electronic.ba/proizvod/61017/grec-db106-dc-components
+
+---- 1 x TRANSFORMATOR ----
+E ovde bi bilo idealno jedan transformator da moze da da potpuno zasebno 7+V i 15+V (koji idu na LM7805 i LM7812) i cini mi se da ce ovo raditi posao:
+
+LINK: https://conrad.ba/product/ei-3023-transformator-za-tiskanu-plocicu-vb-28-va-230-v-2x12-v-2-x-116-ma-bloc
+
+PROBLEM je to sto bi ovo davalo 16.8V na LM7805, sto ce ga grejati dosta, ako to bude problem, bolje uzeti dodatno i ovaj:
+https://conrad.ba/product/ei-30105-print-transformator-vb-1-va
+
+---- 1 x LM7805 ----
+LINK: https://conrad.ba/product/regulator-napona-1-a-pozitivni-on-semiconductor-mc7805ct-kuciste-to-220-izlazni
+
+---- 1 x LM7812 ----
+LINK: https://conrad.ba/product/regulator-napona-01-a-pozitivni-on-semiconductor-mc78l12acp-kuciste-to-92-izl
+
+---- 1 x OPTOKAPLER ----
+** Potrebno da moze drzati bar 12V napon i bar 25mA **
+Skroz OK kapler:
+
+LINK: https://conrad.ba/product/lite-on-optokoplerski-fototranzistor-4n25-dip-6-tranzistor-dc
+
+---- 1 x DC SPREGA ----
+** Kondenzator, bar 330V da izdrzi; DC je napon, tako da moze i elektrolitski (20 puta jeftiniji nego obican) **
+
+LINK: https://electronic.ba/proizvod/53882/elektroliticki-kondenzator-105-10uf-350v
+
+---- 1 x KONTROLER ----
+Dok razvijam prototip, bilo bi najlakse sa Arduinom, moze i Arudino Nano, pa posle idemo na ATtiny13, jer je jeftinije.
+
+LINK: https://electronic.ba/proizvod/43290/arduino-nano-usb-microcontroller-v3
+
+---- OSTALO ----
+Ova manje: LM741, otpornici i mali kondenzatori, to ima tu u radnji sto je 100m od mene i sto radi redovno, a ne ko ova druga, tako to cu tu uzeti.
